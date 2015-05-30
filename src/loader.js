@@ -1,7 +1,7 @@
 import React from 'react';
 
-const LOADER_CHARACTERS = '\\|/—';
-const LOADER_SPEED_MS = 100;
+const DEFAULT_LOADER_CHARACTERS = '\\|/—';
+const DEFAULT_LOADER_SPEED_MS = 100;
 const LOADER_STYLE = {
   fontFamily: 'Consolas, \"Liberation Mono\", Courier, monospace'
 };
@@ -14,8 +14,8 @@ export default class Toto extends React.Component {
     }
 
     static defaultProps = {
-        characters: LOADER_CHARACTERS,
-        speed: LOADER_SPEED_MS
+        characters: DEFAULT_LOADER_CHARACTERS,
+        speed: DEFAULT_LOADER_SPEED_MS
     }
 
     constructor(props) {
@@ -24,7 +24,7 @@ export default class Toto extends React.Component {
     }
 
     componentWillMount() {
-        this.interval = setInterval(::this.nextStep(), this.props.speed);
+        this.interval = setInterval(::this.nextStep, this.props.speed);
     }
 
     componentWillUnmount() {

@@ -15,8 +15,19 @@
   "author": "Stéphane D.",
   "license": "MIT",
   "devDependencies": {
-    "babel-eslint": "^3.1.9",
-    "eslint": "^0.21.2",
-    "eslint-plugin-react": "^2.4.0"
-  }
+    "babel-eslint": "latest",
+    "eslint": "latest",
+    "eslint-plugin-react": "latest"
+  },
+  "dependencies": {
+    "react": "^latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chtefi/react-ascii-loader"
+  },
+  "bugs": {
+    "url": "https://github.com/chtefi/react-ascii-loader/issues"
+  },
+  "homepage": "https://github.com/chtefi/react-ascii-loader"
 }
