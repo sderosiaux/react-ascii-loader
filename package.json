@@ -1,0 +1,21 @@
+{
+  "name": "react-ascii-loader",
+  "version": "1.0.0",
+  "description": "A simple ASCII loader",
+  "main": "src/loader.js",
+  "scripts": {
+    "build": "babel src/loader.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "loader",
+    "ascii"
+  ],
+  "author": "Stéphane D.",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^0.21.2",
+    "eslint-plugin-react": "^2.4.0"
+  }
+}

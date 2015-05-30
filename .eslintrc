@@ -1,0 +1,53 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parser": "babel-eslint",
+  "plugins": [
+      "eslint-plugin-react"
+  ],
+  "rules": {
+  	// 2 for error, 1 for warning
+    
+  	// babel-eslint
+    "quotes": [2, "single"], // no 3 but ''
+    "strict": [2, "never"], // babel-eslint has some issue with "use strict" , disable it
+
+    // eslint-plugin-react
+    "react/wrap-multilines": 2, // parenthesis when doing return (<div>..</div>) on multilines
+    // methods order in the class must follow the lifecycle order
+    "react/sort-comp": [2, {
+    	order: [ 'lifecycle', 'everything-else', 'render' ],
+	  	groups: {
+		    lifecycle: [
+		      'displayName',
+		      'propTypes',
+		      'mixins',
+		      'statics',
+		      'constructor', // constructor is not specified in the default group.lifecycle, so it's added there!
+		      'getDefaultProps',
+		      'getInitialState',
+		      'componentWillMount',
+		      'componentDidMount',
+		      'componentWillReceiveProps',
+		      'shouldComponentUpdate',
+		      'componentWillUpdate',
+		      'componentDidUpdate',
+		      'componentWillUnmount'
+		    ]
+	  	}
+  	}],
+    "react/react-in-jsx-scope": 2, // React must be require(), not global
+    "react/prop-types": 2, // all this.props.XXX must have XXX defined in propTypes
+    "react/no-unknown-property": 2, // warn unknown jsx properties (only class= it seems?!)
+    "react/no-multi-comp": 2, // one react component per file
+    "react/no-did-update-set-state": 1, // no setState in componentDidUpdate (to avoid retrigger another render)  (seems to not work in ES6 style?)
+    "react/no-did-mount-set-state": [ 1, "allow-in-func" ], // no setState in componentDidMount (to avoid retrigger another render) (seems to not work in ES6 style?)
+    "react/jsx-sort-prop-types": 2, // order propTypes alphabetically
+    "react/jsx-sort-props": 0, // not mandatory to set them alphabetically when using the component
+    "react/jsx-no-undef": 2, // check for non imported component used in the JSX
+    "react/jsx-quotes": [ 2, "double", "avoid-escape"], // <Hello name="John" />; or <Hello name='John "and" Me' />;
+    "react/jsx-boolean-value": [ 2, "always" ]
+  }
+}
