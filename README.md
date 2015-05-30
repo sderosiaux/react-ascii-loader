@@ -1,5 +1,5 @@
 # Description
-A simple ASCII loader : \|/—
+A simple ASCII loader : `\|/—`
 
 # Example
 
