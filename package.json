@@ -1,6 +1,6 @@
 {
   "name": "react-ascii-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple ASCII loader",
   "main": "src/loader.js",
   "scripts": {
@@ -20,7 +20,7 @@
     "eslint-plugin-react": "latest"
   },
   "dependencies": {
-    "react": "^latest"
+    "react": "latest"
   },
   "repository": {
     "type": "git",
