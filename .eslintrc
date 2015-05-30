@@ -23,6 +23,7 @@
 		    lifecycle: [
 		      'displayName',
 		      'propTypes',
+          'defaultProps',
 		      'mixins',
 		      'statics',
 		      'constructor', // constructor is not specified in the default group.lifecycle, so it's added there!
